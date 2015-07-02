@@ -62,12 +62,12 @@ class Place: NSObject, MKAnnotation {
     _coordinate = aCoordinate
 
     // MARK: Demo #2
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateStyle = .ShortStyle
-    dateFormatter.timeStyle = .ShortStyle
-    if let date = aDate {
-      subtitle = dateFormatter.stringFromDate(date)
-    }
+//    let dateFormatter = NSDateFormatter()
+//    dateFormatter.dateStyle = .ShortStyle
+//    dateFormatter.timeStyle = .ShortStyle
+//    if let date = aDate {
+//      subtitle = dateFormatter.stringFromDate(date)
+//    }
     super.init()
   }
 }

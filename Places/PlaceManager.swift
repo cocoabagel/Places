@@ -42,19 +42,19 @@ class PlaceManager: NSObject {
 
   // MARK: Demo #1
   
-//  let dateFormatter: NSDateFormatter = {
-//    let formatter = NSDateFormatter()
-//    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss zzz"
-//    return formatter
-//  }()
+  let dateFormatter: NSDateFormatter = {
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss zzz"
+    return formatter
+  }()
 
   // MARK: Demo #2
-//  let subtitleFormatter: NSDateFormatter = {
-//    let formatter = NSDateFormatter()
-//    formatter.dateStyle = .ShortStyle
-//    formatter.timeStyle = .ShortStyle
-//    return formatter
-//  }()
+  let subtitleFormatter: NSDateFormatter = {
+    let formatter = NSDateFormatter()
+    formatter.dateStyle = .ShortStyle
+    formatter.timeStyle = .ShortStyle
+    return formatter
+  }()
   
   /** Fetches places and returns an array of Place objects. */
   func fetchPlacesWithCompletion(completion: (places: [Place]) -> Void) {
@@ -89,8 +89,8 @@ class PlaceManager: NSObject {
   
         // Convert date string to date.
         // MARK: Demo #1
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss zzz"
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss zzz"
         var date: NSDate? = dateFormatter.dateFromString(dateString)
 
         // Create location coordinate.
@@ -105,7 +105,7 @@ class PlaceManager: NSObject {
         let place = Place(title: title, date: date, image: image, coordinate: locationCoordinate)
         
         // MARK: Demo #2
-//        place.subtitle = subtitleFormatter.stringFromDate(date!)
+        place.subtitle = subtitleFormatter.stringFromDate(date!)
         
         placesObjects.append(place)
       }
